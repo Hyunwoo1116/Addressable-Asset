@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
-Addressable Asset/[Ll]ibrary/
-Addressable Asset/[Tt]emp/
-Addressable Asset/[Oo]bj/
-Addressable Asset/[Bb]uild/
-Addressable Asset/[Bb]uilds/
-Addressable Asset/[Ll]ogs/
-Addressable Asset/[Uu]ser[Ss]ettings/
+Addressable-Asset/[Ll]ibrary/
+Addressable-Asset/[Tt]emp/
+Addressable-Asset/[Oo]bj/
+Addressable-Asset/[Bb]uild/
+Addressable-Asset/[Bb]uilds/
+Addressable-Asset/[Ll]ogs/
+Addressable-Asset/[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
