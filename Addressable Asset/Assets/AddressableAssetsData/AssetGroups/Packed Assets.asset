@@ -14,13 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Packed Assets
   m_GUID: afc0f0da0dde2164ea09bad1d821fc73
-  m_SerializeEntries:
-  - m_GUID: ba601c790b0ff3a40ab222b848a5e14d
-    m_Address: Assets/AddressableStudy/Cube.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Cube
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: abadb4bff75edc243a465e1b49591de5, type: 2}
   m_SchemaSet:
