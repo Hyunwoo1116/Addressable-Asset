@@ -32,7 +32,7 @@ public class AddressableCloud
         }
     }
 
-    private static string GetPlatformFolder()
+    public static string GetPlatformFolder()
     {
         // ÇÃ·§Æû¿¡ µû¸¥ ºôµå Æú´õ °áÁ¤
         switch (EditorUserBuildSettings.activeBuildTarget)

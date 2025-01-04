@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: ccb09f2806d5d68429c0c2de21f6ded9
   m_currentHash:
     serializedVersion: 2
-    Hash: c42b5bd3ff6312b3650db4db07e8e53f
+    Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_CatalogRequestsTimeout: 0
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_BuildAddressablesWithPlayerBuild: 0
   m_overridePlayerVersion: '[UnityEditor.PlayerSettings.bundleVersion]'
   m_GroupAssets:
-  - {fileID: 11400000, guid: 49373014a8fac1246822a3e6352313d4, type: 2}
+  - {fileID: 11400000, guid: ec35b7d0db1597741809b954f1774dae, type: 2}
   - {fileID: 11400000, guid: b7f286a85eaf0b542a30f19906e40708, type: 2}
   m_BuildSettings:
     m_LogResourceManagerExceptions: 1
@@ -73,13 +73,13 @@ MonoBehaviour:
       - m_Id: a9700f026a3ae8b45b90b90b9f5b72c5
         m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
       - m_Id: b3f36e567d438184a87707033869cb6d
-        m_Value: '[UnityEngine.Application.persistentDataPath]/ServerData/[BuildPlatform]'
+        m_Value: '[UnityEngine.Application.persistentDataPath]/ServerData/[BuildTarget]'
       - m_Id: b640122e6a6a2ca438c48e915dc7a51f
         m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
       - m_Id: c178d81917c4b98499321ea74603df9a
         m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
       - m_Id: fb4b6889d9e109942b90ba676ee4cc76
-        m_Value: 'https://firebasestorage.googleapis.com/v0/b/fir-storage-18cef.appspot.com/o/AddressableAsset/ServerData/[BuildTarget]'
+        m_Value: 'https://storage.googleapis.com/fir-storage-18cef.firebasestorage.app/[BuildTarget]'
     m_ProfileEntryNames:
     - m_Id: a9700f026a3ae8b45b90b90b9f5b72c5
       m_Name: Local.LoadPath
@@ -102,6 +102,7 @@ MonoBehaviour:
     - default
     - Cube
     - Local
+    - Remote
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: ecfeff9f56b73fc4ca1bf70766032ed9, type: 2}

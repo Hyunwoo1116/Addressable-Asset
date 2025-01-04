@@ -13,11 +13,21 @@ MonoBehaviour:
   m_Name: Packed Assets
   m_EditorClassIdentifier: 
   m_GroupName: Packed Assets
-  m_GUID: afc0f0da0dde2164ea09bad1d821fc73
-  m_SerializeEntries: []
+  m_GUID: 6dbe7993f87d6814eaf8e49901833124
+  m_SerializeEntries:
+  - m_GUID: 1d53cc2a5648fe949acda4cc0bc9805a
+    m_Address: Cube
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fee7d6146e7e81848951af42d0a24004
+    m_Address: Sphere
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: abadb4bff75edc243a465e1b49591de5, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: ca607562cc33b564fa927c492ad38acf, type: 2}
-    - {fileID: 11400000, guid: 452a82f15ad4ff54193d407866d39083, type: 2}
+    - {fileID: 11400000, guid: ee57c09cfea6e0a4284fdb8063822133, type: 2}
+    - {fileID: 11400000, guid: 88b13368eddeec043bc96b5e19b96e45, type: 2}
