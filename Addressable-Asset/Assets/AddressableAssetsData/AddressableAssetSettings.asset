@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: ccb09f2806d5d68429c0c2de21f6ded9
   m_currentHash:
     serializedVersion: 2
-    Hash: a05527950916303d6a7e4780828320ea
+    Hash: c705ea5c65020f390eca6feee6f62dce
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_CatalogRequestsTimeout: 0
@@ -80,7 +80,7 @@ MonoBehaviour:
       - m_Id: c178d81917c4b98499321ea74603df9a
         m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
       - m_Id: fb4b6889d9e109942b90ba676ee4cc76
-        m_Value: 'https://storage.googleapis.com/fir-storage-18cef.firebasestorage.app/[BuildTarget]'
+        m_Value: 'https://storage.googleapis.com/unityruntimeassetload.firebasestorage.app/[BuildTarget]'
     m_ProfileEntryNames:
     - m_Id: a9700f026a3ae8b45b90b90b9f5b72c5
       m_Name: Local.LoadPath
