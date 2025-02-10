@@ -8,27 +8,59 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 public class AddressableRuntimeLoadAsset : MonoBehaviour
 {
 
-    async void Start()
-    {
-        
-    }
+    public Alert Alert;
 
+    DownloadAddressable downloadAddressable;
+
+    
     public async void DownloadAudioResource()
     {
-        AsyncOperationHandle<long> handle = Addressables.GetDownloadSizeAsync("Assets/AssetStore/AS_Casual_Island_Game_Sounds_FREE/Jingles/Jingle_2.wav");
+        Debug.Log("DownloadButtonClick");
+        Addressables.InitializeAsync();
+        AsyncOperationHandle<long> handle = Addressables.GetDownloadSizeAsync("Sounds");
 
         while (!handle.IsDone)
         {
             await Task.Yield();
         }
-        if (handle.Result > 0 )
+        if (handle.Result > 0)
         {
             Debug.Log($"Download 받을것이 있음.{handle.Result}Bytes");
+            string messgaeBody = $"다운로드 받으시겠습니까?\n{handle.Result}Bytes";
+            downloadAddressable = DownloadDependency;
+            await Alert.ShowDownloadAlert(messgaeBody, downloadAddressable);
         }
+        else
+        {
+            Debug.Log($"Download 받을 것이 없음.{handle.Result}Bytes");
+        }
+    }
+
+    public void ClearAddressableDependency()
+    {
+        Addressables.ClearDependencyCacheAsync("Sounds");
+    }
+
+    public async Task<bool> DownloadDependency()
+    {
+        AsyncOperationHandle handle = Addressables.DownloadDependenciesAsync("Sounds");
+
+        while(!handle.IsDone)
+        {
+            await Task.Yield();
+        }
+        Debug.Log("DownloadCompleted");
+        return true;
+    }
+
+    public void CreateCube()
+    {
+        Addressables.InitializeAsync();
+        AsyncOperationHandle handle = Addressables.InstantiateAsync("Cube", transform);
     }
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
