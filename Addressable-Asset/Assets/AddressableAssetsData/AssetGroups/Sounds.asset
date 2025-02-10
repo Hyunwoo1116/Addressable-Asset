@@ -16,19 +16,19 @@ MonoBehaviour:
   m_GUID: daaf6433ac6ad344197a2e76a763f348
   m_SerializeEntries:
   - m_GUID: 023c5cad62009475eae6ff3b1af7622a
-    m_Address: Sounds
+    m_Address: Sounds1
     m_ReadOnly: 0
     m_SerializedLabels:
     - Sounds
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 35cc5875b0df84ea6a7f055aa5681755
-    m_Address: Assets/AssetStore/AS_Casual_Island_Game_Sounds_FREE/Jingles/Jingle_4.wav
+    m_Address: Sounds2
     m_ReadOnly: 0
     m_SerializedLabels:
     - Sounds
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3c9e6bc48ff4440b4ba9d7c9e4474e9f
-    m_Address: Assets/AssetStore/AS_Casual_Island_Game_Sounds_FREE/SFX/SFX_2.wav
+    m_Address: Sounds33
     m_ReadOnly: 0
     m_SerializedLabels:
     - Sounds

@@ -12,12 +12,14 @@ public class AddressableRuntimeLoadAsset : MonoBehaviour
 
     DownloadAddressable downloadAddressable;
 
+    public List<string> Keys = new List<string>() { "Sounds", "Prefabs" };
+
     
     public async void DownloadAudioResource()
     {
         Debug.Log("DownloadButtonClick");
         Addressables.InitializeAsync();
-        AsyncOperationHandle<long> handle = Addressables.GetDownloadSizeAsync("Sounds");
+        AsyncOperationHandle<long> handle = Addressables.GetDownloadSizeAsync(Keys);
 
         while (!handle.IsDone)
         {
@@ -38,12 +40,12 @@ public class AddressableRuntimeLoadAsset : MonoBehaviour
 
     public void ClearAddressableDependency()
     {
-        Addressables.ClearDependencyCacheAsync("Sounds");
+        Addressables.ClearDependencyCacheAsync(Keys);
     }
 
     public async Task<bool> DownloadDependency()
     {
-        AsyncOperationHandle handle = Addressables.DownloadDependenciesAsync("Sounds");
+        AsyncOperationHandle handle = Addressables.DownloadDependenciesAsync(Keys, Addressables.MergeMode.Union);
 
         while(!handle.IsDone)
         {

@@ -15,30 +15,65 @@ MonoBehaviour:
   m_GroupName: Prefabs
   m_GUID: 2972ffd2e8484c949879a771cff7a3af
   m_SerializeEntries:
+  - m_GUID: 05344867c8cddfc42bee3a55c90dc139
+    m_Address: 'Sphere3 '
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Prefabs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 12953bd57f4c54144867647f9663cd38
+    m_Address: Sphere3 2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Prefabs
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1d53cc2a5648fe949acda4cc0bc9805a
     m_Address: Cube
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Prefabs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2606274e721767344851e212c06a00e1
+    m_Address: Sphere 2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Prefabs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 83f95cdd295f9f143ab8e46ef5a0cde1
+    m_Address: Sphereeee
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Prefabs
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a088b3e5704c76943abf6280aa3ffc5a
     m_Address: Plane
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Prefabs
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cc443e8449677d945b97aa205e955748
     m_Address: Cylinder
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Prefabs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d0a0321059a78f140958238e038d5e4e
+    m_Address: Sphere3 1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Prefabs
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dea5572abb0a4624f9afbe99f57ea3d2
     m_Address: CylinderRemote
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Prefabs
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fee7d6146e7e81848951af42d0a24004
     m_Address: Sphere
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Prefabs
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: abadb4bff75edc243a465e1b49591de5, type: 2}
