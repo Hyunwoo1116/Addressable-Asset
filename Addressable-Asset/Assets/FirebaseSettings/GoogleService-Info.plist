@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyC5-dRsVpbWRFvw-gPoMIYNwGHvCBuLpxg</string>
+	<string>AIzaSyCtS9tOjMelWLOk00rFN4aJtidtwgBTDdA</string>
 	<key>GCM_SENDER_ID</key>
-	<string>816537520705</string>
+	<string>475213818533</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.unity.AddressableAsset.iOS</string>
+	<string>com.hyun.unityload</string>
 	<key>PROJECT_ID</key>
-	<string>fir-storage-18cef</string>
+	<string>unityruntimeassetload</string>
 	<key>STORAGE_BUCKET</key>
-	<string>fir-storage-18cef.firebasestorage.app</string>
+	<string>unityruntimeassetload.firebasestorage.app</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:816537520705:ios:95b0e30618bf40c08414c0</string>
+	<string>1:475213818533:ios:b652e42bf742a370ad3b4c</string>
 </dict>
 </plist>

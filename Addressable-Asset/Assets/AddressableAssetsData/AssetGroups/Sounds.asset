@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Sounds
+  m_EditorClassIdentifier: 
+  m_GroupName: Sounds
+  m_GUID: daaf6433ac6ad344197a2e76a763f348
+  m_SerializeEntries:
+  - m_GUID: 023c5cad62009475eae6ff3b1af7622a
+    m_Address: Sounds
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 35cc5875b0df84ea6a7f055aa5681755
+    m_Address: Assets/AssetStore/AS_Casual_Island_Game_Sounds_FREE/Jingles/Jingle_4.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c9e6bc48ff4440b4ba9d7c9e4474e9f
+    m_Address: Assets/AssetStore/AS_Casual_Island_Game_Sounds_FREE/SFX/SFX_2.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 53a1ec72601f14c1c9469fb698b13c49
+    m_Address: Assets/AssetStore/AS_Casual_Island_Game_Sounds_FREE/Jingles/Jingle_3.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ad3f2ddcf1854b70979eb63be7c65d5
+    m_Address: Assets/AssetStore/AS_Casual_Island_Game_Sounds_FREE/SFX/SFX_3.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7096c237e384d435ab4bf80e18bf6a18
+    m_Address: Assets/AssetStore/AS_Casual_Island_Game_Sounds_FREE/Buttons/Button_1.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 70d178aff50724ba284879183f3d0597
+    m_Address: Assets/AssetStore/AS_Casual_Island_Game_Sounds_FREE/SFX/SFX_5.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 92c40ab7ca7374d3786d834d6da04585
+    m_Address: Assets/AssetStore/AS_Casual_Island_Game_Sounds_FREE/Buttons/Button_Hover_1.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9e7d29224fe414cb2b9a1a824c36e0bc
+    m_Address: Assets/AssetStore/AS_Casual_Island_Game_Sounds_FREE/Buttons/Button_Hover_3.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a09c33f58502b403abe7277f1751bd20
+    m_Address: Assets/AssetStore/AS_Casual_Island_Game_Sounds_FREE/SFX/SFX_1.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a43ada77586bd4852bf7f0b888198bf4
+    m_Address: Assets/AssetStore/AS_Casual_Island_Game_Sounds_FREE/Jingles/Jingle_5.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a446fc3f5b0e6403799cfa0111e8fe3b
+    m_Address: Assets/AssetStore/AS_Casual_Island_Game_Sounds_FREE/Buttons/Button_Hover_2.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ad59f5a14b4f049789aa350b9c608f20
+    m_Address: Assets/AssetStore/AS_Casual_Island_Game_Sounds_FREE/Buttons/Button_3.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bbd601ea1aabc4e57ba448bbd489f093
+    m_Address: Assets/AssetStore/AS_Casual_Island_Game_Sounds_FREE/Jingles/Jingle_1.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7e441c828a3843efb07e5665d1efb14
+    m_Address: Assets/AssetStore/AS_Casual_Island_Game_Sounds_FREE/SFX/SFX_4.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d923860589a0748e981a2145fbc32489
+    m_Address: Assets/AssetStore/AS_Casual_Island_Game_Sounds_FREE/Buttons/Button_2.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sounds
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: abadb4bff75edc243a465e1b49591de5, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 9801a92138f8a654a9ff90ec09358c12, type: 2}
+    - {fileID: 11400000, guid: 9e77320ce3869694185e53f6af60ec99, type: 2}
