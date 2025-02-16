@@ -602,6 +602,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Alert: {fileID: 1286495060}
+  Keys:
+  - Sounds
+  - Prefabs
 --- !u!1 &960407015
 GameObject:
   m_ObjectHideFlags: 0
