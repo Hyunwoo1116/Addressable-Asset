@@ -2,10 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using Utills.Progress;
 using static UnityEngine.AddressableAssets.Addressables;
+using Progress = Utills.Progress.Progress;
 
 public class AddressableRuntimeLoadAsset : MonoBehaviour
 {
@@ -18,6 +21,8 @@ public class AddressableRuntimeLoadAsset : MonoBehaviour
 
     public float TotalDownloadDependency;
 
+    public Progress progress;
+    
     public async void DownloadAudioResource()
     {
         Debug.Log("DownloadButtonClick");
@@ -47,12 +52,13 @@ public class AddressableRuntimeLoadAsset : MonoBehaviour
     {
         Addressables.ClearDependencyCacheAsync(Keys);
     }
-
-
     public async Task<bool> DownloadDependencySingle()
     {
         foreach (string key in Keys)
         {
+            progress.Initalize();
+            progress.SetProgressName(key);
+            progress.Show();
             try
             {
                 AsyncOperationHandle handle = Addressables.DownloadDependenciesAsync(key, false);
@@ -60,6 +66,7 @@ public class AddressableRuntimeLoadAsset : MonoBehaviour
                 while (!handle.IsDone)
                 {
                     DownloadStatus status = handle.GetDownloadStatus();
+                    progress.SetProgress(status.Percent);
                     Debug.Log($"Key{key}\n{key}TotalBytes{status.TotalBytes}\nCurrentDownloadedBytes{status.DownloadedBytes}\nNeedDownloadBytes{status.TotalBytes - status.DownloadedBytes}");
                     await Task.Yield();
                 }
@@ -68,9 +75,11 @@ public class AddressableRuntimeLoadAsset : MonoBehaviour
             catch (Exception error)
             {
                 Debug.LogError(error.Message);
+                progress.Hide();
                 return false;
             }
         }
+        progress.Hide();
         return true;
     }
     public async Task<bool> DownloadDependencies() // Mutliple

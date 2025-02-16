@@ -6,4 +6,6 @@ public interface IProgress
     string SetProgressName(string ProgressName);
     float SetProgress(float percentage);
     void Hide();
+
+    void Initalize();
 }

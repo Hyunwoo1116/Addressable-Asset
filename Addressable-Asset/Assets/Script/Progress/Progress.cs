@@ -34,10 +34,17 @@ namespace Utills.Progress
 
         private void UpdatePercentage()
         {
-            float targetValue = Mathf.Lerp(currentSliderValue, currentPercentage, Time.deltaTime);
+            float targetValue = Mathf.Lerp(currentSliderValue, currentPercentage, 0.8f);
             currentSliderValue = targetValue;
             Progressbar.value = targetValue;
-            ProgressPercentage.text = $"{((int)targetValue) * 100} %";
+            ProgressPercentage.text = $"{(int)(targetValue * 100)} %";
+        }
+
+        public void Initalize()
+        {
+            Progressbar.value = 0f;
+            ProgressPercentage.text = "0 %";
+            ProgressTitle.text = string.Empty;
         }
     }
 }
