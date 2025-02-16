@@ -1,9 +1,11 @@
-using NUnit.Framework;
+ï»¿using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using static UnityEngine.AddressableAssets.Addressables;
 
 public class AddressableRuntimeLoadAsset : MonoBehaviour
 {
@@ -14,7 +16,8 @@ public class AddressableRuntimeLoadAsset : MonoBehaviour
 
     public List<string> Keys = new List<string>() { "Sounds", "Prefabs" };
 
-    
+    public float TotalDownloadDependency;
+
     public async void DownloadAudioResource()
     {
         Debug.Log("DownloadButtonClick");
@@ -27,14 +30,16 @@ public class AddressableRuntimeLoadAsset : MonoBehaviour
         }
         if (handle.Result > 0)
         {
-            Debug.Log($"Download ¹ŞÀ»°ÍÀÌ ÀÖÀ½.{handle.Result}Bytes");
-            string messgaeBody = $"´Ù¿î·Îµå ¹ŞÀ¸½Ã°Ú½À´Ï±î?\n{handle.Result}Bytes";
-            downloadAddressable = DownloadDependency;
+            Debug.Log($"Download ë°›ì„ê²ƒì´ ìˆìŒ.{handle.Result}Bytes");
+            string messgaeBody = $"ë‹¤ìš´ë¡œë“œ ë°›ìœ¼ì‹œê² ìŠµë‹ˆê¹Œ?\n{handle.Result}Bytes";
+            TotalDownloadDependency = handle.Result;
+            //downloadAddressable = DownloadDependencies; MultipleDownload
+            downloadAddressable = DownloadDependencySingle;
             await Alert.ShowDownloadAlert(messgaeBody, downloadAddressable);
         }
         else
         {
-            Debug.Log($"Download ¹ŞÀ» °ÍÀÌ ¾øÀ½.{handle.Result}Bytes");
+            Debug.Log($"Download ë°›ì„ ê²ƒì´ ì—†ìŒ.{handle.Result}Bytes");
         }
     }
 
@@ -43,21 +48,54 @@ public class AddressableRuntimeLoadAsset : MonoBehaviour
         Addressables.ClearDependencyCacheAsync(Keys);
     }
 
-    public async Task<bool> DownloadDependency()
-    {
-        AsyncOperationHandle handle = Addressables.DownloadDependenciesAsync(Keys, Addressables.MergeMode.Union);
 
-        while(!handle.IsDone)
+    public async Task<bool> DownloadDependencySingle()
+    {
+        foreach (string key in Keys)
         {
+            try
+            {
+                AsyncOperationHandle handle = Addressables.DownloadDependenciesAsync(key, false);
+
+                while (!handle.IsDone)
+                {
+                    DownloadStatus status = handle.GetDownloadStatus();
+                    Debug.Log($"Key{key}\n{key}TotalBytes{status.TotalBytes}\nCurrentDownloadedBytes{status.DownloadedBytes}\nNeedDownloadBytes{status.TotalBytes - status.DownloadedBytes}");
+                    await Task.Yield();
+                }
+                handle.Release();
+            }
+            catch (Exception error)
+            {
+                Debug.LogError(error.Message);
+                return false;
+            }
+        }
+        return true;
+    }
+    public async Task<bool> DownloadDependencies() // Mutliple
+    {
+        AsyncOperationHandle handle = Addressables.DownloadDependenciesAsync(Keys, Addressables.MergeMode.Union, false);
+
+        while (!handle.IsDone)
+        {
+            DownloadStatus downloadStatus = handle.GetDownloadStatus();
+
+            Debug.Log($"Totalbytes{downloadStatus.TotalBytes}");
+            Debug.Log($"DownloadedBytes{downloadStatus.DownloadedBytes}");
+            Debug.Log($"Need To be DownloadBytes{downloadStatus.TotalBytes - downloadStatus.DownloadedBytes} ");
+            Debug.Log($"DownloadPercentage{downloadStatus.Percent}");
+            Debug.Log($"handle.Status{handle.Status}");
+            Debug.Log($"handle.PercenetComplte{handle.PercentComplete}");
             await Task.Yield();
         }
+        handle.Release();
         Debug.Log("DownloadCompleted");
         return true;
     }
 
     public void CreateCube()
     {
-        Addressables.InitializeAsync();
         AsyncOperationHandle handle = Addressables.InstantiateAsync("Cube", transform);
     }
     // Update is called once per frame
