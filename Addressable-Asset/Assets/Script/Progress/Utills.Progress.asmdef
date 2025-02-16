@@ -2,7 +2,9 @@
     "name": "Utills.Progress",
     "rootNamespace": "",
     "references": [
-        "Utills.Progress.Interfaces"
+        "Utills.Progress.Interfaces",
+        "Unity.TextMeshPro",
+        "Unity.TextMeshPro.Editor"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

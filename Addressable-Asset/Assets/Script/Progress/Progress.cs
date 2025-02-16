@@ -1,16 +1,43 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Progress : MonoBehaviour
+namespace Utills.Progress
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class Progress : MonoBehaviour, IProgress
     {
-        
-    }
+        public TextMeshProUGUI ProgressTitle;
+        public TextMeshProUGUI ProgressPercentage;
+        public Slider Progressbar;
+        private float currentSliderValue = 0f;
+        private float currentPercentage = 0f;
+        public void Hide()
+        {
+            this.gameObject.SetActive(false);
+            Progressbar.value = 0f;
+            currentSliderValue = 0f;
+            ProgressTitle.text = string.Empty;
+            ProgressPercentage.text = string.Empty;
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public string SetProgressName(string ProgressName) => ProgressTitle.text = ProgressName;
+        public float SetProgress(float percentage) => currentPercentage = percentage;
+        public void Show()
+        {
+            this.gameObject.SetActive(true);
+        }
+
+        private void Update()
+        {
+            UpdatePercentage();
+        }
+
+        private void UpdatePercentage()
+        {
+            float targetValue = Mathf.Lerp(currentSliderValue, currentPercentage, Time.deltaTime);
+            currentSliderValue = targetValue;
+            Progressbar.value = targetValue;
+            ProgressPercentage.text = $"{((int)targetValue) * 100} %";
+        }
     }
 }

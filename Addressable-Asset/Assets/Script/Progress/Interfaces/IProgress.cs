@@ -1,16 +1,9 @@
 using UnityEngine;
 
-public class IProgress : MonoBehaviour
+public interface IProgress 
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    void Show();
+    string SetProgressName(string ProgressName);
+    float SetProgress(float percentage);
+    void Hide();
 }
