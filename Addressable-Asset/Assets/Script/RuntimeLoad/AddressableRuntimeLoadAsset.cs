@@ -17,12 +17,17 @@ public class AddressableRuntimeLoadAsset : MonoBehaviour
 
     DownloadAddressable downloadAddressable;
 
-    public List<string> Keys = new List<string>() { "Sounds", "Prefabs" };
+    public List<string> Keys;
 
     public float TotalDownloadDependency;
 
     public Progress progress;
-    
+
+    private void Awake()
+    {
+        Keys = new List<string>() { "Sounds", "Prefabs", "FBXs" };
+    }
+
     public async void DownloadAudioResource()
     {
         Debug.Log("DownloadButtonClick");
@@ -103,6 +108,11 @@ public class AddressableRuntimeLoadAsset : MonoBehaviour
         return true;
     }
 
+    public void CreateAddressableRuntime(string key)
+    {
+        // Key : Assets/AssetStore/FBXs/Composition_50.fbx
+        AsyncOperationHandle handle = Addressables.InstantiateAsync(key, transform);
+    }
     public void CreateCube()
     {
         AsyncOperationHandle handle = Addressables.InstantiateAsync("Cube", transform);
