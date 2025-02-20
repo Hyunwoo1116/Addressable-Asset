@@ -1,7 +1,9 @@
 ﻿using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -17,7 +19,7 @@ public class AddressableRuntimeLoadAsset : MonoBehaviour
 
     DownloadAddressable downloadAddressable;
 
-    public List<string> Keys;
+    private List<string> Keys;
 
     public float TotalDownloadDependency;
 
@@ -25,9 +27,56 @@ public class AddressableRuntimeLoadAsset : MonoBehaviour
 
     private void Awake()
     {
-        Keys = new List<string>() { "Sounds", "Prefabs", "FBXs" };
+        Keys = new List<string>() { "Sounds", "Prefabs"};
     }
 
+    //, "FBXs" 
+    public async void DownloadAddressables(string stringLists)
+    {
+        List<string> downloadAddressables = stringLists.Split(',').ToList();
+        await DownloadDependencySingle(downloadAddressables);
+    }
+
+    public void ClearAddressablesKeys(string keys)
+    {
+        List<string> cleaer = keys.Split(',').ToList();
+        ClearAddressableDependency(cleaer);
+    }
+    private void ClearAddressableDependency(List<string> keys)
+    {
+        Addressables.ClearDependencyCacheAsync(keys);
+    }
+
+    private async Task<bool> DownloadDependencySingle(List<string> lists)
+    {
+        foreach (string key in lists)
+        {
+            progress.Initalize();
+            progress.SetProgressName(key);
+            progress.Show();
+            try
+            {
+                AsyncOperationHandle handle = Addressables.DownloadDependenciesAsync(key, false);
+
+                while (!handle.IsDone)
+                {
+                    DownloadStatus status = handle.GetDownloadStatus();
+                    progress.SetProgress(status.Percent);
+                    Debug.Log($"Key{key}\n{key}TotalBytes{status.TotalBytes}\nCurrentDownloadedBytes{status.DownloadedBytes}\nNeedDownloadBytes{status.TotalBytes - status.DownloadedBytes}");
+                    await Task.Yield();
+                }
+                handle.Release();
+            }
+            catch (Exception error)
+            {
+                Debug.LogError(error.Message);
+                progress.Hide();
+                return false;
+            }
+        }
+        progress.Hide();
+        return true;
+    }
     public async void DownloadAudioResource()
     {
         Debug.Log("DownloadButtonClick");
