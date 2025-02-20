@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 2972ffd2e8484c949879a771cff7a3af
   m_currentHash:
     serializedVersion: 2
-    Hash: 458edcea25fb40c017ba7186963cea9e
+    Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_CatalogRequestsTimeout: 0
@@ -59,6 +59,7 @@ MonoBehaviour:
   m_BuildAddressablesWithPlayerBuild: 0
   m_overridePlayerVersion: '[UnityEditor.PlayerSettings.bundleVersion]'
   m_GroupAssets:
+  - {fileID: 11400000, guid: 4de3f2ce6e0ca3948aeb3f8ad6815da2, type: 2}
   - {fileID: 11400000, guid: 9d1f9c3263d017446a90a7364e268d28, type: 2}
   - {fileID: 11400000, guid: 367b3eed62574684fafd57518e0dfb87, type: 2}
   m_BuildSettings:
@@ -105,6 +106,7 @@ MonoBehaviour:
     - Remote
     - Sounds
     - Prefabs
+    - FBXs
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: ecfeff9f56b73fc4ca1bf70766032ed9, type: 2}
