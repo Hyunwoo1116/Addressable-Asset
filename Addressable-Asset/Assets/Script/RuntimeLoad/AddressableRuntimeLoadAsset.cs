@@ -163,9 +163,16 @@ public class AddressableRuntimeLoadAsset : MonoBehaviour
         // Key : Assets/AssetStore/FBXs/Composition_50.fbx
         AsyncOperationHandle handle = Addressables.InstantiateAsync(key, transform);
     }
-    public void CreateCube()
+    public async void CreateCube()
     {
-        AsyncOperationHandle handle = Addressables.InstantiateAsync("Cube", transform);
+        AsyncOperationHandle handle = Addressables.InstantiateAsync("Cube", transform, true);
+        while (!handle.IsDone)
+        {
+            await Task.Yield();
+        }
+
+        GameObject go = handle.Result as GameObject;
+        go.transform.localPosition = Vector3.zero;
     }
     // Update is called once per frame
     void Update()
