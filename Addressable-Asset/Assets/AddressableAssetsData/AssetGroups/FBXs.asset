@@ -51,6 +51,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - FBXs
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 061f0f01f23799f4196fd32739163e37
+    m_Address: Assets/AssetStore/FBXs/Composition_155.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - FBXs
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 07ad1133567d936419cbac6bbbb2c7d4
     m_Address: Assets/AssetStore/FBXs/Composition_150.fbx
     m_ReadOnly: 0
@@ -1084,7 +1090,7 @@ MonoBehaviour:
     - FBXs
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cb7a978244a021144b2ca64f3da8ed52
-    m_Address: Assets/AssetStore/FBXs/Composition_155.fbx
+    m_Address: asdf
     m_ReadOnly: 0
     m_SerializedLabels:
     - FBXs
@@ -1446,7 +1452,8 @@ MonoBehaviour:
   - m_GUID: feab993b28091c5418ee500b2e2b382c
     m_Address: Assets/AssetStore/FBXs/Composition_148.fbx
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - FBXs
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: feeaab817a41e094a9e6a830848b977f
     m_Address: Assets/AssetStore/FBXs/Pavement_145.fbx

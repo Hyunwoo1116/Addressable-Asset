@@ -27,7 +27,7 @@ public class AddressableRuntimeLoadAsset : MonoBehaviour
 
     private void Awake()
     {
-        Keys = new List<string>() { "Sounds", "Prefabs"};
+        Keys = new List<string>() { "Sounds", "Prefabs", "FBXs"};
     }
 
     //, "FBXs" 
@@ -40,6 +40,8 @@ public class AddressableRuntimeLoadAsset : MonoBehaviour
     public void ClearAddressablesKeys(string keys)
     {
         List<string> cleaer = keys.Split(',').ToList();
+        Debug.Log(cleaer.Count);
+
         ClearAddressableDependency(cleaer);
     }
     private void ClearAddressableDependency(List<string> keys)
@@ -101,7 +103,6 @@ public class AddressableRuntimeLoadAsset : MonoBehaviour
             Debug.Log($"Download 받을 것이 없음.{handle.Result}Bytes");
         }
     }
-
     public void ClearAddressableDependency()
     {
         Addressables.ClearDependencyCacheAsync(Keys);
