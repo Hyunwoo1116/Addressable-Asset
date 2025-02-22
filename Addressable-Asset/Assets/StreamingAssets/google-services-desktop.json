@@ -7,20 +7,22 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:475213818533:android:8bacabc0ec3d6866ad3b4c",
+        "mobilesdk_app_id": "1:475213818533:ios:b652e42bf742a370ad3b4c",
         "android_client_info": {
           "package_name": "com.hyun.unityload"
         }
       },
-      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyA8CU6H0etcZbFsMdbvZsrfK74gpMpd5pQ"
+          "current_key": "AIzaSyCtS9tOjMelWLOk00rFN4aJtidtwgBTDdA"
         }
       ],
       "services": {
+        "analytics_service": {
+          "status": 0
+        },
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "status": 1
         }
       }
     }
