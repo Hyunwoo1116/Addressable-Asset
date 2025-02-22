@@ -27,8 +27,16 @@ public class AddressableRuntimeLoadAsset : MonoBehaviour
 
     private void Awake()
     {
-        Keys = new List<string>() { "Sounds", "Prefabs", "FBXs"};
+        Keys = new List<string>() { "Sounds", "Prefabs"};
+
+        //CleaerAddressablesCache();
     }
+
+    public void CleaerAddressablesCache()
+    {
+        Caching.ClearCache();
+    }
+        
 
     //, "FBXs" 
     public async void DownloadAddressables(string stringLists)
